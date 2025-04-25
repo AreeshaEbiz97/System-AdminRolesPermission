@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="0f3e318d-b63c-4269-b97e-35309990db0e" name="admin@QA-JENKINS 2025-04-25 11:33:23" runUser="QA-JENKINS\admin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-04-25T11:33:23.9942763+05:00" queuing="2025-04-25T11:33:23.9942769+05:00" start="2025-04-25T11:31:42.5727450+05:00" finish="2025-04-25T11:33:24.0150079+05:00" />
+  <TestSettings name="default" id="f59dcb4c-6b1e-4c5b-903c-da4e7be5f70d">
+    <Deployment runDeploymentRoot="admin_QA-JENKINS_2025-04-25_11_33_23" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="cb5fadab-ba87-46f7-a1e0-9a7945ba8429" testId="6164896b-a0d4-9294-d4d9-0d6496c70804" testName="FullRolePermissionWorkflow" computerName="QA-JENKINS" duration="00:01:36.8808210" startTime="2025-04-25T11:31:46.3987000+05:00" endTime="2025-04-25T11:33:23.2793820+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb5fadab-ba87-46f7-a1e0-9a7945ba8429">
+      <Output>
+        <StdOut>Given I login as the admin with email "testerequis.ition@gmail.com" and password "Aa1234567"&#xD;
+-&gt; done: RolePermissionSteps.GivenILoginAsTheAdmin("testerequis.ition...", "Aa1234567") (1.4s)&#xD;
+And I select the product "Intuit QuickBooks® Desktop" and log in to the company&#xD;
+-&gt; done: RolePermissionSteps.GivenISelectProductAndLogin("Intuit QuickBooks...") (5.7s)&#xD;
+And I navigate to the Role Management page&#xD;
+-&gt; done: RolePermissionSteps.GivenINavigateToRolePage() (2.8s)&#xD;
+When I create a new role named "PermissionRole23" with all permissions&#xD;
+-&gt; done: RolePermissionSteps.WhenICreateNewRoleWithAllPermissions("PermissionRole23") (6.3s)&#xD;
+And I assign this role to a user with email "permissiontestuser23@gmail.com"&#xD;
+-&gt; done: RolePermissionSteps.WhenIAssignRoleToUser("permissiontestuse...") (7.9s)&#xD;
+And I remove all view permissions from "PermissionRole23"&#xD;
+-&gt; done: RolePermissionSteps.WhenIRemoveViewPermissions("PermissionRole23") (11.8s)&#xD;
+And I login as the user "permissiontestuser23@gmail.com" and verify no view permissions are accessible&#xD;
+-&gt; done: RolePermissionSteps.WhenILoginAsUserAndVerifyNoViews("permissiontestuse...") (3.3s)&#xD;
+And I login back as the admin and update the role to remove create permissions&#xD;
+-&gt; done: RolePermissionSteps.WhenIRemoveCreatePermissions() (11.9s)&#xD;
+And I login as the user again and verify create options are not available&#xD;
+-&gt; done: RolePermissionSteps.WhenIVerifyCreatePermissions() (3.0s)&#xD;
+And I login back as the admin and update the role to remove delete permissions&#xD;
+-&gt; done: RolePermissionSteps.WhenIRemoveDeletePermissions() (10.5s)&#xD;
+And I login as the user and verify delete actions are not accessible&#xD;
+-&gt; done: RolePermissionSteps.WhenIVerifyDeletePermissions() (4.8s)&#xD;
+And I login as admin and remove edit permissions&#xD;
+-&gt; done: RolePermissionSteps.WhenIRemoveEditPermissions() (10.2s)&#xD;
+Then the user should not be able to edit their profile or other users&#xD;
+-&gt; done: RolePermissionSteps.ThenUserShouldNotBeAbleToEdit() (9.3s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="FullRolePermissionWorkflow" storage="c:\new folder\system-adminrolespermission\bin\debug\net8.0\systemadminpermissions.dll" id="6164896b-a0d4-9294-d4d9-0d6496c70804">
+      <Execution id="cb5fadab-ba87-46f7-a1e0-9a7945ba8429" />
+      <TestMethod codeBase="C:\New folder\System-AdminRolesPermission\bin\Debug\net8.0\SystemAdminPermissions.dll" adapterTypeName="executor://nunit3testexecutor/" className="SystemAdminPermissions.RolePermissionManagementFeature" name="FullRolePermissionWorkflow" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="6164896b-a0d4-9294-d4d9-0d6496c70804" executionId="cb5fadab-ba87-46f7-a1e0-9a7945ba8429" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started&#xD;
+Running all tests in C:\New folder\System-AdminRolesPermission\bin\Debug\net8.0\SystemAdminPermissions.dll&#xD;
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+Given I login as the admin with email "testerequis.ition@gmail.com" and password "Aa1234567"&#xD;
+-&gt; done: RolePermissionSteps.GivenILoginAsTheAdmin("testerequis.ition...", "Aa1234567") (1.4s)&#xD;
+And I select the product "Intuit QuickBooks® Desktop" and log in to the company&#xD;
+-&gt; done: RolePermissionSteps.GivenISelectProductAndLogin("Intuit QuickBooks...") (5.7s)&#xD;
+And I navigate to the Role Management page&#xD;
+-&gt; done: RolePermissionSteps.GivenINavigateToRolePage() (2.8s)&#xD;
+When I create a new role named "PermissionRole23" with all permissions&#xD;
+-&gt; done: RolePermissionSteps.WhenICreateNewRoleWithAllPermissions("PermissionRole23") (6.3s)&#xD;
+And I assign this role to a user with email "permissiontestuser23@gmail.com"&#xD;
+-&gt; done: RolePermissionSteps.WhenIAssignRoleToUser("permissiontestuse...") (7.9s)&#xD;
+And I remove all view permissions from "PermissionRole23"&#xD;
+-&gt; done: RolePermissionSteps.WhenIRemoveViewPermissions("PermissionRole23") (11.8s)&#xD;
+And I login as the user "permissiontestuser23@gmail.com" and verify no view permissions are accessible&#xD;
+-&gt; done: RolePermissionSteps.WhenILoginAsUserAndVerifyNoViews("permissiontestuse...") (3.3s)&#xD;
+And I login back as the admin and update the role to remove create permissions&#xD;
+-&gt; done: RolePermissionSteps.WhenIRemoveCreatePermissions() (11.9s)&#xD;
+And I login as the user again and verify create options are not available&#xD;
+-&gt; done: RolePermissionSteps.WhenIVerifyCreatePermissions() (3.0s)&#xD;
+And I login back as the admin and update the role to remove delete permissions&#xD;
+-&gt; done: RolePermissionSteps.WhenIRemoveDeletePermissions() (10.5s)&#xD;
+And I login as the user and verify delete actions are not accessible&#xD;
+-&gt; done: RolePermissionSteps.WhenIVerifyDeletePermissions() (4.8s)&#xD;
+And I login as admin and remove edit permissions&#xD;
+-&gt; done: RolePermissionSteps.WhenIRemoveEditPermissions() (10.2s)&#xD;
+Then the user should not be able to edit their profile or other users&#xD;
+-&gt; done: RolePermissionSteps.ThenUserShouldNotBeAbleToEdit() (9.3s)&#xD;
+&#xD;
+NUnit Adapter 5.0.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
